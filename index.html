@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>B3 income calculator</title>
+</head>
+<body>
+<!-- the header holds the title and intro message  -->
+    <header>
+        <!-- title -->
+        <div>
+            <h1>B3 Annual income and true value calculator</h1>
+        </div>
+
+        <!-- page description -->
+        <div>
+            <p>have you ever been in a meeting where they ask about your annual income but not actually know?</p>
+            <p>now if you use this site that will no longer be a problem</p>
+            <p>here we not only calcutate you annual incomes both net and gross; this also can tell you the true value of your money in your state</p>
+        </div>
+
+
+    </header>
+
+    <!-- main holds the form, a true value mapp, and the results  -->
+    <main>
+
+    <!-- form div for user input -->
+        <div>
+            <form>
+            <!-- state radio box -->
+                <div>
+                    <label for="state-select">Choose Your State:</label>
+                    <select>
+                        <option name="state-select" value=""          > --make your choice-- </option>
+                        <option name="state-select" value="California"> California           </option>
+                        <option name="state-select" value="Oregon"    > Oregon               </option>
+                        <option name="state-select" value="Washinton" > Washinton            </option>
+                        <option name="state-select" value="Navada"    > Navada               </option>
+                    </select>
+                        
+                </div>
+
+            <!-- pay schedual radio -->
+                <div>
+                    <label for="paySchedual">how often do you get paid:</label>
+                    <select>
+                        <option name="paySchedual" value=""      > --make your choice-- </option>
+                        <option name="paySchedual" value="week"  > Weekly               </option>
+                        <option name="paySchedual" value="biWeek"> Bi-Weekly            </option>
+                        <option name="paySchedual" value="month" > Monthly              </option>
+                    </select>
+                </div>
+
+            <!-- pay structure -->
+                <div>
+                    <label for="structure"> what kind of pay do you recieve</label>
+                    <input type="radio" name="structure" value="salary"> salary
+                    <input type="radio" name="structure" value="hourly"> hourly
+                </div>
+
+            <!-- enter amount and hours worked -->
+                <div>
+                    <p>enter your salary or hourly wage(numbers only)</p>
+                    <input type="text" id="wage">
+                    <p>how much do you work (only for hourly)(numbers only)</p>
+                    <input type="text" id="hours">
+                </div>
+            </form>
+        </div>
+
+    <!-- american true value map -->
+        <div>
+            <div>
+                <p></p>
+            </div>
+
+            <img src="map.jpg" alt="american state map with true 100$ values for each state" width="700" height="500">
+        </div>
+    
+    <!-- returned values area  -->
+        <div>
+            <div>
+                <h6>annual Net</h6>
+                <p>(value)</p>    
+            </div>
+
+            <div>
+                <h6>annual gross</h6>
+                <p>(value)</p>
+            </div>
+
+            <div>
+                <h4>true gross</h4>
+                <p>(value)</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- the footer holds a thank you message as well as a line to show i made the site and claim ownership for the site-->
+    <footer>
+
+    </footer>
+</body>
+</html>
