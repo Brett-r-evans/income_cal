@@ -10,17 +10,16 @@
 <!-- the header holds the title and intro message  -->
     <header>
         <!-- title -->
-        <div>
+        <div id="title" class="headDiv">
             <h1>B3 Annual income and true value calculator</h1>
         </div>
 
         <!-- page description -->
-        <div>
+        <div id="pgdes" class="headDiv">
             <p>have you ever been in a meeting where they ask about your annual income but not actually know?</p>
             <p>now if you use this site that will no longer be a problem</p>
             <p>here we not only calcutate you annual incomes both net and gross; this also can tell you the true value of your money in your state</p>
         </div>
-
 
     </header>
 
@@ -28,10 +27,10 @@
     <main>
 
     <!-- form div for user input -->
-        <div>
+        <div id="pageForm">
             <form>
             <!-- state radio box -->
-                <div>
+                <div class="formEle" id="states">
                     <label for="state-select">Choose Your State:</label>
                     <select>
                         <option name="state-select" value=""          > --make your choice-- </option>
@@ -40,11 +39,10 @@
                         <option name="state-select" value="Washinton" > Washinton            </option>
                         <option name="state-select" value="Navada"    > Navada               </option>
                     </select>
-                        
                 </div>
 
             <!-- pay schedual radio -->
-                <div>
+                <div class="formEle" id="Schedual">
                     <label for="paySchedual">how often do you get paid:</label>
                     <select>
                         <option name="paySchedual" value=""      > --make your choice-- </option>
@@ -55,14 +53,14 @@
                 </div>
 
             <!-- pay structure -->
-                <div>
+                <div class="formEle" id="struct">
                     <label for="structure"> what kind of pay do you recieve</label>
                     <input type="radio" name="structure" value="salary"> salary
                     <input type="radio" name="structure" value="hourly"> hourly
                 </div>
 
             <!-- enter amount and hours worked -->
-                <div>
+                <div class="formEle" id="userInput">
                     <p>enter your salary or hourly wage(numbers only)</p>
                     <input type="text" id="wage">
                     <p>how much do you work (only for hourly)(numbers only)</p>
@@ -72,27 +70,23 @@
         </div>
 
     <!-- american true value map -->
-        <div>
-            <div>
-                <p></p>
-            </div>
-
-            <img src="map.jpg" alt="american state map with true 100$ values for each state" width="700" height="500">
+        <div id="imgDiv">
+            <img src="map.png" alt="american state map with true 100$ values for each state" width="700" height="500">
         </div>
     
     <!-- returned values area  -->
-        <div>
-            <div>
-                <h6>annual Net</h6>
+        <div id="rValues">
+            <div class="rValues">
+                <h4>annual Net</h4>
                 <p>(value)</p>    
             </div>
 
-            <div>
-                <h6>annual gross</h6>
+            <div class="rValues">
+                <h4>annual gross</h4>
                 <p>(value)</p>
             </div>
 
-            <div>
+            <div class="rValues">
                 <h4>true gross</h4>
                 <p>(value)</p>
             </div>
