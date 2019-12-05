@@ -5,16 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>B3 income calculator</title>
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="css/main.css">
 </head>
 <body>
 <!-- the header holds the title and intro message  -->
     <header>
-        <!-- title -->
+    <!-- title -->
         <div id="title" class="headDiv">
             <h1>B3 Annual income and true value calculator</h1>
         </div>
 
-        <!-- page description -->
+    <!-- page description -->
         <div id="pgdes" class="headDiv">
             <p>have you ever been in a meeting where they ask about your annual income but not actually know?</p>
             <p>now if you use this site that will no longer be a problem</p>
@@ -23,34 +25,30 @@
 
     </header>
 
-    <!-- main holds the form, a true value mapp, and the results  -->
-    <main>
+<!-- main that holds the form -->
+    <main id="leftside">
 
     <!-- form div for user input -->
         <div id="pageForm">
             <form>
             <!-- state radio box -->
-                <div class="formEle" id="states">
-                    <label for="state-select">Choose Your State:</label>
-                    <select>
-                        <option name="state-select" value=""          > --make your choice-- </option>
-                        <option name="state-select" value="California"> California           </option>
-                        <option name="state-select" value="Oregon"    > Oregon               </option>
-                        <option name="state-select" value="Washinton" > Washinton            </option>
-                        <option name="state-select" value="Navada"    > Navada               </option>
-                    </select>
-                </div>
+                <label for="state-select">Choose Your State:</label>
+                <select class="formEle">
+                    <option name="state-select" value=""          > --make your choice-- </option>
+                    <option name="state-select" value="California"> California           </option>
+                    <option name="state-select" value="Oregon"    > Oregon               </option>
+                    <option name="state-select" value="Washinton" > Washinton            </option>
+                    <option name="state-select" value="Navada"    > Navada               </option>
+                </select>
 
             <!-- pay schedual radio -->
-                <div class="formEle" id="Schedual">
-                    <label for="paySchedual">how often do you get paid:</label>
-                    <select>
-                        <option name="paySchedual" value=""      > --make your choice-- </option>
-                        <option name="paySchedual" value="week"  > Weekly               </option>
-                        <option name="paySchedual" value="biWeek"> Bi-Weekly            </option>
-                        <option name="paySchedual" value="month" > Monthly              </option>
-                    </select>
-                </div>
+                <label for="paySchedual">how often do you get paid:</label>
+                <select>
+                    <option name="paySchedual" value=""      > --make your choice-- </option>
+                    <option name="paySchedual" value="week"  > Weekly               </option>
+                    <option name="paySchedual" value="biWeek"> Bi-Weekly            </option>
+                    <option name="paySchedual" value="month" > Monthly              </option>
+                </select>
 
             <!-- pay structure -->
                 <div class="formEle" id="struct">
@@ -60,15 +58,19 @@
                 </div>
 
             <!-- enter amount and hours worked -->
-                <div class="formEle" id="userInput">
+                <div class="formEle" id="wages">
                     <p>enter your salary or hourly wage(numbers only)</p>
                     <input type="text" id="wage">
-                    <p>how much do you work (only for hourly)(numbers only)</p>
+                </div>
+                <div class="formEle" id="hrsWorked">    
+                    <p>how much do you work per week(only for hourly)(numbers only please)</p>
                     <input type="text" id="hours">
                 </div>
             </form>
         </div>
-
+    </main>
+<!-- main to handle the return values and real value map -->
+    <main id="rightside">
     <!-- american true value map -->
         <div id="imgDiv">
             <img src="map.png" alt="american state map with true 100$ values for each state" width="700" height="500">
