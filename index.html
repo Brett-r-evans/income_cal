@@ -10,74 +10,82 @@
 </head>
 <body>
 <!-- the header holds the title and intro message  -->
-    <header class="col-md-12">
+    <header id="title" class="col-md-12">
     <!-- title -->
-        <div id="title" class="headDiv">
-            <h1>B3 Annual income and true value calculator</h1>
-        </div>
-
+        <h1>B3 Annual income and true value calculator</h1>
     <!-- page description -->
-        <div id="pgdes" class="headDiv">
-            <p>have you ever been in a meeting where they ask about your annual income but not actually know?
-                now if you use this site that will no longer be a problem. 
-                here we not only calcutate you annual incomes both net and gross; 
-                this also can tell you the true value of your money based on the cost of living compared to the national average.
-                this data comes from the u.s bureau of econmic analysis as of 2017.
-            </p>
-        </div>
-
+        <p>
+            have you ever been in a meeting where they ask about your annual income but not actually know?
+            now if you use this site that will no longer be a problem. 
+            here we not only calcutate you annual incomes both net and gross; 
+            this also can tell you the true value of your money based on the cost of living compared to the national average.
+            this data comes from the u.s bureau of econmic analysis as of 2017.
+        </p>
     </header>
 
 <!-- main that holds the form -->
     <main id="leftside" class="col-md-6">
 
     <!-- form div for user input -->
-        <div id="pageForm">
-            <form>
-            <!-- state radio box -->
-                <div>
-                    <label for="state-select">Choose Your State:</label>
-                    <select class="formEle">
-                        <option name="state-select" value=""          > --make your choice-- </option>
-                        <option name="state-select" value="California"> California           </option>
-                        <option name="state-select" value="Oregon"    > Oregon               </option>
-                        <option name="state-select" value="Washinton" > Washinton            </option>
-                        <option name="state-select" value="Navada"    > Navada               </option>
-                    </select>
-                </div>
+        <form>   
+        <!-- state radio box -->
+            <div class="formEle">
+                <label for="state-select">Choose Your State:</label>
+                <select id="state-opt">
+                    <option name="state-select" value=""          > --make your choice-- </option>
+                    <option name="state-select" value="California"> California           </option>
+                    <option name="state-select" value="Oregon"    > Oregon               </option>
+                    <option name="state-select" value="Washinton" > Washinton            </option>
+                    <option name="state-select" value="Navada"    > Navada               </option>
+                </select>
+            </div>
             <!-- pay schedual radio -->
-                <div>
-                    <label for="paySchedual">how often do you get paid:</label>
-                    <select>
-                        <option name="paySchedual" value=""      > --make your choice-- </option>
-                        <option name="paySchedual" value="week"  > Weekly               </option>
-                        <option name="paySchedual" value="biWeek"> Bi-Weekly            </option>
-                        <option name="paySchedual" value="month" > Monthly              </option>
-                    </select>
-                </div>
+            <div class="formEle">
+                <label for="paySchedual">how often do you get paid:</label>
+                <select id="scehdual-opt">
+                    <option name="paySchedual" value=""      > --make your choice-- </option>
+                    <option name="paySchedual" value="week"  > Weekly               </option>
+                    <option name="paySchedual" value="biWeek"> Bi-Weekly            </option>
+                    <option name="paySchedual" value="month" > Monthly              </option>
+                </select>
+            </div>
             <!-- pay structure -->
-                <div class="formEle" id="struct">
-                    <label for="structure"> what kind of pay do you recieve</label>
-                    <input type="radio" name="structure" value="salary"> salary
-                    <input type="radio" name="structure" value="hourly"> hourly
-                </div>
+            <div class="formEle">
+                <label for="structure"> what kind of pay do you recieve</label>
+                <input type="radio" name="structure" value="salary"> salary
+                <input type="radio" name="structure" value="hourly"> hourly
+            </div>
 
             <!-- enter amount and hours worked -->
-                <div class="formEle" id="wages">
-                    <p>enter your salary or hourly wage(numbers only)</p>
-                    <input type="text" id="wage">
+            <div class="formEle" id="wages">
+                <label>enter your salary or hourly wage</label>
+                <input type="text" id="wage">
+            </div>
+            <div class="formEle" id="hrsWorked">    
+                <label>how many hours do you work per week</label>
+                <input type="text" id="hours">
+            </div>
+            <div id="submitButton">
+                <button id="submit">Submit</button>
+            </div>
+        </form>
+        
+        <div id="returned">
+                <div class="rValues col-sm-1">
+                    <h3>annual Net</h3>
+                    <em>(value)</em>    
                 </div>
-                <div class="formEle" id="hrsWorked">    
-                    <p>how much do you work per week(only for hourly)(numbers only please)</p>
-                    <input type="text" id="hours">
+    
+                <div class="rValues col-sm-1">
+                    <h3>annual gross</h3>
+                    <em>(value)</em>
                 </div>
-                <div>
-                    <button class="formEle" id="submitButton">Submit</button>
+    
+                <div class="rValues col-sm-1">
+                    <h3>true gross</h3>
+                    <em>(value)</em>
                 </div>
-
-
-            </form>
-        </div>
+        </div>        
     </main>
 
 <!-- main to handle the return values and real value map -->
@@ -86,35 +94,17 @@
         <div id="imgDiv">
             <img src="map.png" alt="american state map with true 100$ values for each state" width="700" height="500">
         </div>
-    
-    <!-- returned values area  -->
-        <div id="returned">
-            <div class="rValues">
-                <h4>annual Net</h4>
-                <p>(value)</p>    
-            </div>
-
-            <div class="rValues">
-                <h4>annual gross</h4>
-                <p>(value)</p>
-            </div>
-
-            <div class="rValues">
-                <h4>true gross</h4>
-                <p>(value)</p>
-            </div>
-        </div>
     </main>
-
     <!-- the footer holds a thank you message as well as a line to show i made the site and claim ownership for the site-->
-    <footer>
-        <div class="col-md-12">
+    <footer class="col-md-12" id="footer">
+        <div id="thank">
             <h3>thank you for visiting this simple site</h3>
             <p>hope this site came in use for you</p>
         </div>    
-        <div>
-            <p>this page is made by Brett R Evans within a week</p>
+        <div id="author">
+            <p>this page is made by Brett R Evans</p>
         </div>
     </footer>
 </body>
+<script></script>
 </html>

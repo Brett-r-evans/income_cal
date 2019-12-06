@@ -1,0 +1,102 @@
+body {
+    background-color: #543EC1;
+}
+h1 {font-size: 40px;}
+h3 {font-size: 30px;}
+em, p {font-size: 20px;}
+
+h1, h3, h4, p, em, label {
+    color: #543EC1;
+}
+
+/* header styles */
+
+header h1 {
+    text-align: center;
+    width: 50%;
+    padding: 1%;
+
+    position: relative;
+    left: 25%;
+
+    text-decoration: double underline 2px #543EC1;
+    background-color: #ABC13E;
+}
+
+header p {
+    text-align: center;
+    width: 50%;
+
+    position: relative;
+    left: 25%;
+
+    font-size: 20px;
+    background-color: #ABC13E;
+}
+
+/* main styles */
+main {
+    height: 525px;
+}
+
+/* form styles */
+form {
+    margin-top: 1.25%;
+    margin-left: 10%;
+    padding: 3%;
+
+    background-color: #ABC13E;
+}
+.formEle {
+    margin-bottom: 3%;
+    font-size: 20px;
+}
+form #submitButton {
+    text-align: end;
+}
+/* returned value styles */
+#returned {
+    text-align: center;
+    margin-left: 30%;
+    
+}
+
+#returned .rValues {
+    float: inline-start;
+    width: 33%;
+    padding: .5%;
+    margin-top: 5%;
+
+    position: relative;
+    right: 14%;
+
+    background-color: #ABC13E;
+
+}
+.rValues h3 {
+    text-decoration: double underline 2px #543EC1;
+}
+
+
+img {
+    float: right;
+    margin-top: 1.25%;
+    width: 89%;
+}
+
+/* footer */
+#thank {
+    width: 75%;
+    margin: 2.5%;
+    margin-left: 15%;
+    text-align: center;
+    color: #543EC1;
+    background-color: #ABC13E;
+}
+#thank h3{
+    text-decoration: double underline #543EC1;
+}
+#author p {
+    font-size: 10px;
+    color: #ABC13E;
+}
