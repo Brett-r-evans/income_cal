@@ -3,8 +3,8 @@ body {
 }
 h1 {font-size: 40px;}
 h3 {font-size: 30px;}
-em, p {font-size: 20px;}
-
+p {font-size: 20px;}
+em {font-size: 25px;}
 h1, h3, h4, p, em, label {
     color: #543EC1;
 }

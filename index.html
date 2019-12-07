@@ -27,7 +27,7 @@
     <main id="leftside" class="col-md-6">
 
     <!-- form div for user input -->
-        <form id="mainForm" >   
+        <form id="mainForm"  action="#">   
         <!-- state radio box -->
             <div class="formEle">
                 <label for="state-select">*Choose Your State:</label>                
@@ -61,32 +61,32 @@
 
             <!-- enter amount and hours worked -->
             <div class="formEle" id="wages">
-                <label>*Enter your salary or hourly wage:</label>
+                <label for="wageInt">*Enter your salary or hourly wage:</label>
                 <input type="text" id="wageInt" placeholder="numbers only please">
             </div>
             <div class="formEle" id="hrsWorked">    
-                <label>How many hours do you work per week:</label>
+                <label for="hours">How many hours do you work per week:</label>
                 <input type="text" id="hours" placeholder="numbers only please">
             </div>
             <div id="submitButton">
-                <button id="submit"> Submit </button>
+                <button id="submit-button"> Submit </button>
             </div>
         </form>
         
         <div id="returned">
                 <div class="rValues">
                     <h3>Annual Gross</h3>
-                    <em id="valueField">(value)</em>    
+                    <em id="grossField">(value)</em>    
                 </div>
     
                 <div class="rValues">
                     <h3>Annual Net</h3>
-                    <em id="valueField">(value)</em>
+                    <em id="netField">(value)</em>
                 </div>
     
                 <div class="rValues">
                     <h3>True Net</h3>
-                    <em id="valueField">(value)</em>
+                    <em id="trueField">(value)</em>
                 </div>
         </div>        
     </main>
