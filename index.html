@@ -12,14 +12,14 @@
 <!-- the header holds the title and intro message  -->
     <header id="title" class="col-md-12">
     <!-- title -->
-        <h1>B3 Annual income and true value calculator</h1>
+        <h1>B3 Annual Income and True Value Calculator</h1>
     <!-- page description -->
         <p>
-            have you ever been in a meeting where they ask about your annual income but not actually know?
-            now if you use this site that will no longer be a problem. 
-            here we not only calcutate you annual incomes both net and gross; 
-            this also can tell you the true value of your money based on the cost of living compared to the national average.
-            this data comes from the u.s bureau of econmic analysis as of 2017.
+            Have you ever been in a meeting where they ask about your annual income but not actually know?
+            Now if you use this site that will no longer be a problem. 
+            Here we not only calcutate you annual incomes both net and gross; 
+            This also can tell you the true value of your money based on the cost of living compared to the national average.
+            This data comes from the u.s bureau of econmic analysis as of 2017.
         </p>
     </header>
 
@@ -27,22 +27,22 @@
     <main id="leftside" class="col-md-6">
 
     <!-- form div for user input -->
-        <form>   
+        <form id="mainForm" >   
         <!-- state radio box -->
             <div class="formEle">
-                <label for="state-select">Choose Your State:</label>
-                <select id="state-opt">
+                <label for="state-select">*Choose Your State:</label>                
+                <select id="state-select">
                     <option name="state-select" value=""          > --make your choice-- </option>
                     <option name="state-select" value="California"> California           </option>
-                    <option name="state-select" value="Oregon"    > Oregon               </option>
-                    <option name="state-select" value="Washinton" > Washinton            </option>
-                    <option name="state-select" value="Navada"    > Navada               </option>
+                    <option name="state-select" value="Oregon"    > Colorado             </option>
+                    <option name="state-select" value="Washinton" > Navada               </option>
+                    <option name="state-select" value="Navada"    > Alabama              </option>
                 </select>
             </div>
             <!-- pay schedual radio -->
             <div class="formEle">
-                <label for="paySchedual">how often do you get paid:</label>
-                <select id="scehdual-opt">
+                <label for="paySchedual">*How often do you get paid:</label>
+                <select id="paySchedual">
                     <option name="paySchedual" value=""      > --make your choice-- </option>
                     <option name="paySchedual" value="week"  > Weekly               </option>
                     <option name="paySchedual" value="biWeek"> Bi-Weekly            </option>
@@ -51,39 +51,42 @@
             </div>
             <!-- pay structure -->
             <div class="formEle">
-                <label for="structure"> what kind of pay do you recieve</label>
-                <input type="radio" name="structure" value="salary"> salary
-                <input type="radio" name="structure" value="hourly"> hourly
+                <label for="payStructure">*What kind of pay do you recieve:</label>
+                <select id="payStructure">
+                    <option name="payStructure" value=""      > --make your choice-- </option>
+                    <option name="payStructure" value="salary"> Salary               </option>
+                    <option name="payStructure" value="hourly"> Hourly               </option>
+                </select>    
             </div>
 
             <!-- enter amount and hours worked -->
             <div class="formEle" id="wages">
-                <label>enter your salary or hourly wage</label>
-                <input type="text" id="wage">
+                <label>*Enter your salary or hourly wage:</label>
+                <input type="text" id="wageInt" placeholder="numbers only please">
             </div>
             <div class="formEle" id="hrsWorked">    
-                <label>how many hours do you work per week</label>
-                <input type="text" id="hours">
+                <label>How many hours do you work per week:</label>
+                <input type="text" id="hours" placeholder="numbers only please">
             </div>
             <div id="submitButton">
-                <button id="submit">Submit</button>
+                <button id="submit"> Submit </button>
             </div>
         </form>
         
         <div id="returned">
-                <div class="rValues col-sm-1">
-                    <h3>annual Net</h3>
-                    <em>(value)</em>    
+                <div class="rValues">
+                    <h3>Annual Gross</h3>
+                    <em id="valueField">(value)</em>    
                 </div>
     
-                <div class="rValues col-sm-1">
-                    <h3>annual gross</h3>
-                    <em>(value)</em>
+                <div class="rValues">
+                    <h3>Annual Net</h3>
+                    <em id="valueField">(value)</em>
                 </div>
     
-                <div class="rValues col-sm-1">
-                    <h3>true gross</h3>
-                    <em>(value)</em>
+                <div class="rValues">
+                    <h3>True Net</h3>
+                    <em id="valueField">(value)</em>
                 </div>
         </div>        
     </main>
@@ -106,5 +109,5 @@
         </div>
     </footer>
 </body>
-<script></script>
+<script src="main.js"></script>
 </html>

@@ -25,10 +25,11 @@ header h1 {
 
 header p {
     text-align: center;
-    width: 50%;
+    width: 70%;
+    padding: 1%;
 
     position: relative;
-    left: 25%;
+    left: 15%;
 
     font-size: 20px;
     background-color: #ABC13E;
@@ -51,24 +52,46 @@ form {
     margin-bottom: 3%;
     font-size: 20px;
 }
+#wageInt, #hours {
+    width: 30%;
+}
+
+#state-select {
+    position: relative;
+    left: 25.25%;
+}
+#paySchedual {
+    position: relative;
+    left: 15.5%;
+}
+#payStructure {
+    position: relative;
+    left: 8.25%;
+}
+#wageInt {
+    position: relative;
+    left: 7.45%;
+}
 form #submitButton {
     text-align: end;
 }
+
 /* returned value styles */
 #returned {
+    width: 91%;
     text-align: center;
-    margin-left: 30%;
+    margin-left: 9%;
     
 }
 
 #returned .rValues {
     float: inline-start;
     width: 33%;
-    padding: .5%;
-    margin-top: 5%;
+    padding-bottom: 1%;
+    margin-top: 4%;
 
     position: relative;
-    right: 14%;
+    left: 1%;
 
     background-color: #ABC13E;
 
@@ -77,7 +100,9 @@ form #submitButton {
     text-decoration: double underline 2px #543EC1;
 }
 
-
+#imgDiv {
+    margin-right: 10%;
+}
 img {
     float: right;
     margin-top: 1.25%;
@@ -89,6 +114,7 @@ img {
     width: 75%;
     margin: 2.5%;
     margin-left: 15%;
+    padding: 0.05%;
     text-align: center;
     color: #543EC1;
     background-color: #ABC13E;
