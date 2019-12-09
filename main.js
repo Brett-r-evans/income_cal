@@ -57,7 +57,7 @@ function getGross () {
         alert("you have to fill all stared form items")
     }
 
-    Math.round(grossVal * 100)/100
+    roundVals(grossVal)
     console.log("your total gross income is: " + grossVal + "$")
     document.getElementById("grossField").innerHTML = "$" + grossVal
     getNet()
@@ -130,7 +130,7 @@ function getNet() {
     let taxMonVal = grossVal * taxRate
     netVal = grossVal - taxMonVal 
 
-    Math.round(netVal * 100) / 100
+    roundVals(netVal)
     console.log("your annual net is: " + netVal)
     document.getElementById("netField").innerHTML = "$" + netVal
     getTrueValue()
